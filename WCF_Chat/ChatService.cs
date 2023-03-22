@@ -22,7 +22,7 @@ namespace WCF_Chat
                 OperationContext = OperationContext.Current
             };
             _nextId++;
-            SendMessage($"{user.Name} has joined the chat!");
+            SendMessage($"{user.Name} has joined the chat!", 0);
             _users.Append(user);
             return user.Id;
         }
@@ -34,12 +34,18 @@ namespace WCF_Chat
             {
                 _users.Remove(userToDelete);
             }
-            SendMessage($"{userToDelete.Name} has left the chat!");
+            SendMessage($"{userToDelete.Name} has left the chat!", 0);
         }
 
-        public void SendMessage(string message)
+        public void SendMessage(string message, int id)
         {
-            throw new System.NotImplementedException();
+            foreach (ChatUser user in _users)
+            {
+                
+                var author = _users.FirstOrDefault(x => x.Id == id);
+                string answer = $"{DateTime.Now.ToShortTimeString()}: {author?.Name} {message}";
+                user.OperationContext.GetCallbackChannel<IChatCallbackService>().MessageCallback(answer);
+            }
         }
     }
 }

@@ -12,6 +12,6 @@ namespace WCF_Chat
         void Disconnect(int id);
 
         [OperationContract(IsOneWay = false)]
-        void SendMessage(string message);
+        void SendMessage(string message, int id);
     }
 }

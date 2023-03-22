@@ -4,7 +4,7 @@ namespace WCF_Chat
 {
     public interface IChatCallbackService
     {
-        [OperationContract]
+        [OperationContract(IsOneWay = true)]
         void MessageCallback(string message);
     }
 }
