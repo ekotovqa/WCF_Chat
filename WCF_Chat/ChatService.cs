@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
-using System.ServiceModel.Channels;
 
 namespace WCF_Chat
 {
@@ -12,7 +10,7 @@ namespace WCF_Chat
     {
         private List<ChatUser> _users = new List<ChatUser>();
         private int _nextId = 1;
-        
+
         public int Connect(string name)
         {
             ChatUser user = new ChatUser()
@@ -41,7 +39,7 @@ namespace WCF_Chat
         {
             foreach (ChatUser user in _users)
             {
-                
+
                 var author = _users.FirstOrDefault(x => x.Id == id);
                 string answer = $"{DateTime.Now.ToShortTimeString()}: {author?.Name} {message}";
                 user.OperationContext.GetCallbackChannel<IChatCallbackService>().MessageCallback(answer);

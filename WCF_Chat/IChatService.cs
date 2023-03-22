@@ -2,7 +2,7 @@
 
 namespace WCF_Chat
 {
-    [ServiceContract(CallbackContract = typeof(IChatCallbackService)]
+    [ServiceContract(CallbackContract = typeof(IChatCallbackService))]
     public interface IChatService
     {
         [OperationContract]
