@@ -10,7 +10,7 @@
         <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Height="31" Margin="18,19,0,0" VerticalAlignment="Top" Width="149" Click="btnConnect_Click"/>
         <TextBox x:Name="tbUserName" HorizontalAlignment="Left" Height="31" Margin="183,19,0,0" TextWrapping="Wrap" Text="Guest" VerticalAlignment="Top" Width="150"/>
         <ListBox x:Name="lbChat" HorizontalAlignment="Center" Height="288" Margin="0,63,0,0" VerticalAlignment="Top" Width="764" />
-        <TextBox x:Name="tbMessage" HorizontalAlignment="Center" Height="86" Margin="0,366,0,0" TextWrapping="Wrap" Text="Input message" VerticalAlignment="Top" Width="764" KeyDown="tbMessage_KeyDown"/>
+        <TextBox x:Name="tbMessage" HorizontalAlignment="Center" Height="86" Margin="0,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="764" KeyDown="tbMessage_KeyDown"/>
 
     </Grid>
 </Window>

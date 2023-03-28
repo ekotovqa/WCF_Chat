@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="504f295e-25e2-4735-895a-da4198c8c5ca" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="7e137b51-bac4-4cf8-b06f-282efd159332" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8733" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8301" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="ef7f1ee9-256e-418d-b6d3-6f81a1ce3d99" SourceId="1" SourceUrl="http://localhost:8733/?xsd=xsd0" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="dc74849a-5591-4637-86b9-35e3fb8bef22" SourceId="1" SourceUrl="http://localhost:8733/?xsd=xsd1" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="c077a065-0278-4894-a003-e25c7f8f201d" SourceId="1" SourceUrl="http://localhost:8733/?disco" />
-    <MetadataFile FileName="ChatService.wsdl" MetadataType="Wsdl" ID="140f1229-8401-4090-b118-2781c26ca997" SourceId="1" SourceUrl="http://localhost:8733/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="3741201c-cfb1-4e91-a6c3-3b55ed429646" SourceId="1" SourceUrl="http://localhost:8301/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="6159dff9-b8e2-4c12-8afc-0c833ddbdc8f" SourceId="1" SourceUrl="http://localhost:8301/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="50b4ea57-8fa0-4905-8273-45affaf81472" SourceId="1" SourceUrl="http://localhost:8301/?xsd=xsd1" />
+    <MetadataFile FileName="ChatService.wsdl" MetadataType="Wsdl" ID="acd8f25b-1355-4177-b97a-5a7878546b85" SourceId="1" SourceUrl="http://localhost:8301/?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

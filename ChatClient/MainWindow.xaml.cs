@@ -1,13 +1,13 @@
-﻿using System.Windows;
+﻿using ChatClient.ChatService;
+using System.Windows;
 using System.Windows.Input;
-using ChatClient.ChatService;
 
 namespace ChatClient
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, ChatService.IChatServiceCallback
+    public partial class MainWindow : Window, IChatServiceCallback
     {
         private ChatServiceClient _client;
         private bool _isConnected = false;
@@ -15,7 +15,7 @@ namespace ChatClient
 
         public MainWindow()
         {
-            InitializeComponent();         
+            InitializeComponent();
         }
 
         private void ConnectUser()
@@ -62,7 +62,7 @@ namespace ChatClient
             DisconnectUser();
         }
 
-        private void tbMessage_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        private void tbMessage_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
@@ -70,7 +70,7 @@ namespace ChatClient
                 {
                     _client.SendMessage(tbMessage.Text, _id);
                     tbMessage.Text = string.Empty;
-                }                      
+                }
             }
         }
     }
